@@ -30,7 +30,7 @@ const EnrollmentComponent = () => {
         axios
         .post(`http://localhost:3500/api/v1/enroll`,inputs)
         .then(response => console.log(response.status, response.data.message))
-        .catch(error => console.log(error))
+        .catch(error => console.log(error.response.status, error.response.data.message))
     }
 
   return (
