@@ -1,8 +1,11 @@
 import React from 'react'
+import NavigationComponent from './components/NavigationComponent/NavigationComponent'
 
 const App = () => {
   return (
-    <div>App</div>
+    <React.Fragment>
+      <NavigationComponent/>
+    </React.Fragment>
   )
 }
 
