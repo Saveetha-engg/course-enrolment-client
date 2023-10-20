@@ -1,3 +1,4 @@
+import axios from 'axios'
 import React, { useState } from 'react'
 
 const EnrollmentComponent = () => {
@@ -26,7 +27,10 @@ const EnrollmentComponent = () => {
 
     const formSubmitHandler = (event) => {
         event.preventDefault()
-        console.log(inputs)
+        axios
+        .post(`http://localhost:3500/api/v1/enroll`,inputs)
+        .then(response => console.log(response.status, response.data.message))
+        .catch(error => console.log(error))
     }
 
   return (
